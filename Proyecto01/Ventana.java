@@ -1,10 +1,8 @@
 package Proyecto01;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import javax.swing.JLabel;
@@ -13,24 +11,22 @@ import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
+
 import javax.swing.JButton;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
+
 import javax.swing.table.TableColumnModel;
 
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
-import java.awt.Component;
 
 public class Ventana extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+
 	private JTable tabla;
 	private Calcular calcular;
 	private DecimalFormat decimal;
