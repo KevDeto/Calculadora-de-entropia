@@ -110,7 +110,7 @@ public class Ventana extends JFrame {
 
 				tabla.setModel(cargarTabla(calcular));
 
-				centrarDatosTabla();
+				configurarAspectoTabla();
 
 				textSolucion.setText(decimal.format(calcular.devolverSumaFinal()));
 			}
@@ -138,18 +138,15 @@ public class Ventana extends JFrame {
 		int i = 0;
 		Object[] datos;
 		for (String letras : cal.devolverListaLetras()) {
-			datos = convertirString(cal, i);
-
+			datos = contenidoCeldas(cal, i);
 			Object[] contenido = { letras, datos[0], datos[1], datos[2] };
 			tablaModel.addRow(contenido);
 			i++;
 		}
-
 		return tablaModel;
 	}
 
-	// modifico un poco el aspecto de lo que va a contener cada celda
-	private Object[] convertirString(Calcular cal, int i) {
+	private Object[] contenidoCeldas(Calcular cal, int i) {
 		Double probSimbol = cal.devolverListaProbSimbolo().get(i);
 		String dividir = String.valueOf(cal.devolverListaCantRep().get(i) + "/" + cal.devolverTexto().length()) + " =  "
 				+ decimal.format(probSimbol);
@@ -162,7 +159,7 @@ public class Ventana extends JFrame {
 		return datos;
 	}
 
-	private void centrarDatosTabla() {
+	private void configurarAspectoTabla() {
 		// agranda la letra del header y deja el header fijo
 		tabla.getTableHeader().setFont(new java.awt.Font("Dialog", 0, 16));
 		tabla.getTableHeader().setResizingAllowed(false);
@@ -185,6 +182,5 @@ public class Ventana extends JFrame {
 		columnModel.getColumn(1).setPreferredWidth(0);
 		columnModel.getColumn(2).setPreferredWidth(120);
 		columnModel.getColumn(3).setPreferredWidth(120);
-
 	}
 }

@@ -1,6 +1,5 @@
 package Proyecto01;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,12 +12,11 @@ public class Calcular {
 	private ArrayList<Double> listaCantBitSimbolo;
 	private ArrayList<Double> listaSolProbPorBits;
 	private Double sumaFinal;
-	//private DecimalFormat decimal;
 
 	public Calcular() {
 	}
 
-	public Calcular(String texto) { // crea cada una de las listas
+	public Calcular(String texto) {
 		this.texto = texto;
 		this.listaLetras = new ArrayList<>();
 		this.listaCantRep = new ArrayList<>();
@@ -26,7 +24,6 @@ public class Calcular {
 		this.listaCantBitSimbolo = new ArrayList<>();
 		this.listaSolProbPorBits = new ArrayList<>();
 		this.sumaFinal = 0.0;
-		//this.decimal = new DecimalFormat();
 	}
 
 	public void separarCadena() {
@@ -44,8 +41,6 @@ public class Calcular {
 		devolverListaLetras().addAll(auxList);
 	}
 
-	// nota: hashset devulve la lista con la letra de mayor rango primero y asi
-	// susecivamente; ingresa: ddddcccbba. Hashset lo toma como abbcccdddd
 	public void contarRepePorLetra() {
 		quitarRepetidas();
 		for (int i = 0; i < devolverListaLetras().size(); i++) {
@@ -120,7 +115,7 @@ public class Calcular {
 	public Double sumaFinal(Double n) {
 		return this.sumaFinal += n;
 	}
-	
+
 	public Double devolverSumaFinal() {
 		return -(this.sumaFinal);
 	}
