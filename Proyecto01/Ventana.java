@@ -33,7 +33,6 @@ public class Ventana extends JFrame {
 	private JTextField textSolucion;
 
 	public Ventana() {
-
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(new BorderLayout(0, 0));
 

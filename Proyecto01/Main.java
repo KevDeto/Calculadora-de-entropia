@@ -6,5 +6,6 @@ public class Main {
 		frame.setSize(1024, 590);
 		frame.setVisible(true);
 		frame.setLocationRelativeTo(null);
+		frame.setResizable(false);
 	}
 }
