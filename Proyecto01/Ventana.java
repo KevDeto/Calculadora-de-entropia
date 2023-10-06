@@ -131,7 +131,7 @@ public class Ventana extends JFrame {
 			}
 		};
 
-		String[] nombresColumn = { "xi", "p(xi)", "Log2(p(xi)", "p(xi) * Log2(p(xi)" };
+		String[] nombresColumn = { "xi", "p(xi)", "Log2(p(xi))", "p(xi) * Log2(p(xi)" };
 		tablaModel.setColumnIdentifiers(nombresColumn);
 
 		int i = 0;
