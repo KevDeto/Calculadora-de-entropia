@@ -1,4 +1,4 @@
-package Proyecto01;
+package calculadora;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;

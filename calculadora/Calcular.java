@@ -1,4 +1,4 @@
-package Proyecto01;
+package calculadora;
 
 import java.util.ArrayList;
 import java.util.HashSet;
